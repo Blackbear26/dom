@@ -84,3 +84,44 @@ asignamos el valor al elemento seleccionado incluyendo las etiquetas html
 
 titulo.innerHTML = "Heroes <span>Superheroes</span>";
 lista.innerHTML = "<li>Capitan America</li><li>Hulk</li><li>Thor</li><li>Vision</li>";
+
+
+/* getAtribute
+
+devueleve el valor del atributo del MediaElementAudioSourceNode
+
+    elemento.getAtribute(atributo)
+ */
+
+    const enlace = document.getElementsByTagName("a");
+
+    console.log(enlace[0].getAttribute("href"))
+
+    /* 
+    RemoveAtribute
+    
+    remueve el alor del atributo en ele elemento 
+
+        elemento.removeAttribute(atributo)
+    */
+
+    console.log(enlace[0].removeAttribute("href"));
+    
+    /* 
+    setAtribte 
+    
+    asigna un atributo y un valor a un elemento 
+
+        elemento.setAtribute(atributo,valor)
+
+    -sobrescribe un atributo ya escrito
+    -crea un nuevo atrivito y su valor 
+    */
+
+enlace[0].setAttribute("href", "https://instagram.com");
+
+console.log(enlace[0].getAttribute("href"));
+
+enlace[0].setAttribute("target", "_blank");
+
+console.log(enlace[0].getAttribute("target"));
