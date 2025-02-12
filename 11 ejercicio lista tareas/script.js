@@ -38,8 +38,29 @@ function createTask () {
         taskItem.append(taskText, taskIcon);
         taskList.append(taskItem);
 
+        /* escuchadores de los iconos */
+        checkIcon.addEventListener('click', (e) => {
+        e.target.parentNode.parentNode.classList.toggle('complete')
+        });
+
+        /* escuchador al elemento deleteIcon */
+        deleteIcon.addEventListener('click', (e) => {
+            e.target.parentNode.parentNode.remove();
+        })
+
+        /* hacer que cuando el usuario de enter se agreger una tarea y que funcione de manera global */
+        
+
+        /* regresamos el valor al input */
         taskInput.value = '';
-    } else {
-        alert('Escribe una tarea');
-    }
+        } else {
+            alert('Escribe una tarea');
+        }
+
 }
+
+taskInput.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+        createTask();
+    }
+})

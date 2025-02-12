@@ -104,10 +104,10 @@ body {
     cursor: pointer;
 }
 
-.icon-cpmplete:hover {
-    color: rgb(226, 164, 255);
+.icon-complete:hover {
+    color: rgb(0, 255, 38);
 }
 
-icon-delete:hover {
-    color: rgb(136, 99, 153);
+.icon-delete:hover {
+    color: rgb(255, 0, 0);
 }
